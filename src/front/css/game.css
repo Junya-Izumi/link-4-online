@@ -1,0 +1,169 @@
+/* game init */
+.game * {
+    margin: 0;
+    padding: 0;
+}
+
+.play {
+    width: 500px;
+    aspect-ratio: 7 / 6;
+}
+
+.game {
+    height: 600px;
+    /* width: 400px; */
+    padding: 20px;
+    border: solid 1px #000;
+    background-color: var(--game-background-color);
+    /* aspect-ratio:  1 / 2; */
+    text-align: right;
+}
+
+/* GameSelector.vue */
+.game_selector {
+    /* height: 50px; */
+    margin: 0 var(--game-board-border-size);
+    /* border: solid var(--game-board-border-size) rgba(0, 0, 0, 0);
+    border-top: unset;
+    border-bottom: unset; */
+}
+
+.game_selector ul {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    list-style: none;
+    gap: 0;
+}
+
+.game_selector li {
+    border: solid 1.5px #696969;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.game_selector li button {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: 0;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.game_selector button::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url(../assets/game-selector-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    color: #f2e7e7;
+}
+
+.game_selector button[data-player="1"]::after {
+    background-color: var(--game-board-sell-circle-red);
+    opacity: 0.8;
+}
+
+.game_selector button[data-player="2"]::after {
+    background-color: var(--game-board-sell-circle-yellow);
+    opacity: 0.8;
+}
+
+/* GameBord.vue */
+.game_board {
+    display: grid;
+    width: 100%;
+    aspect-ratio: 7 / 6;
+    background-color: var(--game-board-background-color);
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0;
+    box-sizing: border-box;
+    margin-top: 30px;
+    border: solid var(--game-board-border-color) var(--game-board-border-size);
+    border-top: unset;
+}
+
+.game_board_sell {
+    border: solid 1px var(--game-board-sell-circle-border-color);
+    border-radius: var(--game-board-sell-radius);
+    position: relative;
+}
+
+.game_board_sell[data-player="1"]::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: var(--game-board-sell-circle-red);
+    border-radius: 50%;
+}
+
+.game_board_sell[data-player="2"]::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: var(--game-board-sell-circle-yellow);
+    border-radius: 50%;
+}
+
+.game_board_sell[data-emphasize=true] {
+    animation-name: emphasize_aanimetion;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-timing-function: steps();
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    border-width: 5px;
+    box-sizing: inherit;
+}
+
+@keyframes emphasize_aanimetion {
+    0% {
+        border-width: 2.8px;
+    }
+
+    50% {
+        border-width: 0;
+    }
+
+    100% {
+        border-width: 2.8px;
+    }
+}
+
+/* GameMessage.vue */
+.game_message {
+    /* border: solid var(--game-board-border-size) rgba(0, 0, 0, 0); */
+    /* border-bottom: unset; */
+    margin: var(--game-board-border-size);
+    text-align: center;
+}
+
+/* FinishGame.vue */
+.game_finish {
+    font-size: large;
+    border-radius: 3px;
+    border: 0;
+    padding: 5px;
+    margin: 2px;
+    text-align: right;
+    margin: 4px var(--game-board-border-size);
+}
+
+
+/* button:hover {
+    background-color: aquamarine;
+}
+
+button:active {
+    background-color: red;
+    border: solid 1px blue;
+} */

@@ -1,0 +1,64 @@
+#roomId::-webkit-inner-spin-button,
+#roomId::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.home {
+    text-align: center;
+    height: 100%;
+    padding: 10% 0 0 0;
+    background-color: var(--game-background-color);
+}
+
+.home * {
+    font-size: 110%;
+}
+
+
+@keyframes titleColorGradation {
+    0% {
+        color: #FFF;
+    }
+
+    30% {
+        color: #FFF;
+    }
+
+    65% {
+        color: var(--game-board-sell-circle-red);
+    }
+
+    90% {
+        color: var(--game-board-sell-circle-yellow);
+    }
+
+    100% {
+        color: #FFF;
+    }
+}
+
+.title {
+    font-size: 80px;
+    margin: 44px;
+    animation: titleColorGradation infinite 6s ease;
+}
+
+
+
+#createRoom {
+    padding: 12px;
+    font-size: x-large;
+    border-radius: 3px;
+    border: 0;
+}
+
+#joinRoomForm {
+    margin-top: 20px;
+}
+
+#joinRoomForm * {
+    padding: 4px;
+    /* border-radius: 1px; */
+    /* border: 0; */
+}
