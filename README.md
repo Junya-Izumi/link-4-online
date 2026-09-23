@@ -1,10 +1,12 @@
 <p align="center">
-    <img src="./public/readme_header.png" width="450" alt="Link 4 Onilne">
+    <img src="./public/readme_header.png" width="450" alt="Link 4 Online">
 </p>
 
 # Link 4 Online
 『Connect 4』が遊べるオンラインゲームです。
 WebSocket と Vue.js の学習で作りました。
+
+[ English README is here ](./README_en.md)
 ## 技術スタック
 ### フロントエンド
 - 言語: TypeScript
@@ -31,7 +33,7 @@ WebSocket と Vue.js の学習で作りました。
     pip install -r requirements.txt
     ```
 ## 実行方法
-### dev
+### Dev
 1. python サーバーを起動する
 
     venvを利用する場合は実行する前にvenvをアクティベートしてください
@@ -43,19 +45,19 @@ WebSocket と Vue.js の学習で作りました。
     pnpm dev
     ```
 
-`http://localhost:5173`でサイトにアクセスすることができます
-### build
+    `http://localhost:5173`でサイトにアクセスすることができます
+### Build
 1. フロントエンドのファイルをビルドします
     ```bash
     pnpm build
     ```
 2. python サーバーを起動する
-    
+
     venvを利用する場合は実行する前にvenvをアクティベートしてください
     ```bash
     pnpm backend
     ```
-`http://localhost:8000`でビルドしたサイトにアクセスできます
+    `http://localhost:8000`でビルドしたサイトにアクセスできます
 
 ## License
 Private / Personal project
