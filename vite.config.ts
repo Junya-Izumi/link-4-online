@@ -16,10 +16,10 @@ export default defineConfig({
   },
   html: {
     cspNonce: "__NONCE__"
+  },
+  server:{
+    host:true,
+    port:5173,
+    strictPort:true,
   }
-  // server:{
-  //   port:8000,
-  //   strictPort:true,
-  //   allowedHosts:true
-  // }
 });
