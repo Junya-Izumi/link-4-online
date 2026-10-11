@@ -11,6 +11,9 @@ from pathlib import Path
 import secrets
 from typing import Callable, Awaitable
 import os
+import logging
+
+logger = logging.getLogger("uvicorn.error")
 
 
 from routers import http_routes, websocket_routes
