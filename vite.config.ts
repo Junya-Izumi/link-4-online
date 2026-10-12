@@ -18,7 +18,6 @@ export default defineConfig({
     cspNonce: "__NONCE__"
   },
   server:{
-    host:true,
     port:5173,
     strictPort:true,
   }
