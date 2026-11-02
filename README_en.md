@@ -21,7 +21,7 @@ I created this repository to learn WebSocket and Vue.js.
 - uvicorn
 - websockets
 
-## How to run
+## How to run (Docker)
 ### Dev
 Start the development container using `compose.yml`
 ```bash

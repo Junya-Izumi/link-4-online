@@ -21,7 +21,7 @@ WebSocket と Vue.js の学習で作りました。
 - uvicorn
 - websockets
 
-## 実行方法
+## 実行方法 (Docker)
 ### Dev
 `compose.yml` を使って開発コンテナを起動する
 ```bash
