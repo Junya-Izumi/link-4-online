@@ -50,7 +50,7 @@ const updateReadyCheckBox = () => {
         qs(".copyImage")?.addEventListener("click", () => copyRoomId())
         qs("#readyStartGame")?.addEventListener("input", (e) => {
             if (e.target instanceof HTMLInputElement) {
-                console.log("e.target.vlaue:", e.target.checked)
+                console.log("e.target.value:", e.target.checked)
                 room.readyStartGame.input(e.target.checked)
             }
         })
@@ -127,7 +127,7 @@ const remotePlayerReady = computed(() => {
             <div class="roomPlayerSelf">
                 <img src="../assets/person.svg" alt="person" class="personImage">
                 <p>YOU</p>
-                <p>Are you ready? : <input type="checkbox" id="readyStartGame" :vlaue="room.readyStartGame.value"></p>
+                <p>Are you ready? : <input type="checkbox" id="readyStartGame" :value="room.readyStartGame.value"></p>
                 <p>{{ "your color : " + yourColor }}</p>
             </div>
             VS
